@@ -468,7 +468,7 @@ header {
 .about_section .about_content_wrapper .highlight_skills span {
   width: 50%;
   text-align: center;
-  padding: 10px 15px;
+  padding-block: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -485,45 +485,7 @@ header {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.about_section .about_content_wrapper .workExp_container{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  flex-wrap: wrap;
 
-}
-.about_section .about_content_wrapper .workExp_container svg{
-  fill: var(--blue);
-}
-.about_section .about_content_wrapper .workExp_container .work_experience_wrapper {
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding-block: 20px;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
-}
-.about_section .about_content_wrapper .workExp_container .work_exp_detail{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  
-}
-.about_section .about_content_wrapper .workExp_container .work_exp_detail h4{
-  font-size: 16px;
-  font-weight: 600;
-}
-.about_section .about_content_wrapper .workExp_container .work_exp_detail p{
-  font-size: 16px;
-  opacity: .5;
-}
-.about_section .about_content_wrapper .workExp_container .work_exp_detail p:last-child{
-  font-size: 14px;
-  opacity: 1;
-  margin-top: 10px;
-}
 
 @media screen and (max-width:991px) {
   .about_section .about_wrapper {
@@ -555,9 +517,21 @@ header {
 }
 }
 @media screen and (max-width:768px) {
-  .about_section .about_content_wrapper .workExp_container .work_experience_wrapper {
+
+  .about_section .about_content_wrapper .highlight_skills span {
+    font-size: min(5vw, 14px);
+    width: 100%;
+  }
+
+  .about_section .about_content_wrapper .highlight_skills div {
     display: flex;
-    flex: 100%;
+    flex-direction: column;
+  }
+
+  .about_section .about_content_wrapper .highlight_skills {
+    width: 100%;
+    max-width: 350px;
+    padding-block: min(3vw, 20px);
   }
 }
 @media screen and (max-width: 576px) {
@@ -578,21 +552,7 @@ header {
     margin-block: 8px;
   }
 
-  .about_section .about_content_wrapper .highlight_skills span {
-    font-size: min(5vw, 16px);
-    width: 100%;
-  }
 
-  .about_section .about_content_wrapper .highlight_skills div {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about_section .about_content_wrapper .highlight_skills {
-    width: 100%;
-    max-width: 350px;
-    padding-block: min(3vw, 20px);
-  }
 
 }
 
